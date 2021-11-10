@@ -5,7 +5,7 @@ You can find here the first profiles made by intechstudio to explore creative op
 ## Get Started
 
 Each profile has it's own folder here on GitHub with a description (.md file), about what it can do and how you can use it.
-> 
+> Some profiles are generic, some are made to be used with DAW or other software.
 
 Profiles are .json files, which represents one page on one module.
 > Example: 1st Page of a PBF4 module
@@ -17,7 +17,7 @@ When you finish loading or editing the profile store your configuration onto the
 > Once a configuration is stored, you no longer need Grid Editor running.
 
 ## Connect
-Do you have any question or a cool profile to share? Drop it in [Discord](https://discord.gg/GRUdF2R), help others start creating!
+Do you have any question or a cool profile to share? Drop it in [Discord](https://discord.gg/GRUdF2R), help others start creating! Feel free to suggest integrations as well, we will figure something out.
 
 
 
