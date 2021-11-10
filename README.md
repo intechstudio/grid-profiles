@@ -17,7 +17,4 @@ When you finish loading or editing the profile store your configuration onto the
 > Once a configuration is stored, you no longer need Grid Editor running.
 
 ## Connect
-Do you have any question or a cool profile to share? Drop it in [Discord](https://discord.gg/GRUdF2R), help others start creating! Feel free to suggest integrations as well, we will figure something out.
-
-
-
+Do you have any question or a cool profile to share? Drop it in [Discord](https://discord.gg/GRUdF2R), help others start creating!
