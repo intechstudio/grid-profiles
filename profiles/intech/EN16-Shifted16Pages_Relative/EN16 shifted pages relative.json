@@ -1,5 +1,5 @@
 {
-    "name": "16 shifted pages led value relative",
+    "name": "EN16 shifted pages relative",
     "description": "",
     "type": "EN16",
     "isGridProfile": true,
@@ -47,7 +47,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -68,7 +68,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -89,7 +89,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -110,7 +110,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -131,7 +131,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -152,7 +152,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -173,7 +173,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -194,7 +194,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -215,7 +215,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -236,7 +236,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -257,7 +257,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -278,7 +278,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -299,7 +299,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -320,7 +320,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
@@ -341,7 +341,7 @@
                 },
                 {
                     "event": "6",
-                    "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), (gmy()*4+shift)%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,2,val)--[[@cb]] self:gtt(250)--[[@if]] if val>64 then--[[@cb]] glc(num,2,255,50,100)--[[@el]] else--[[@cb]] glc(num,2,50,255,100)--[[@en]] end ?>"
+                    "config": "<?lua --[[@l]] local num = self:ind()--[[@cb]] print('tick')glc(num,2,glr(),glg(),glb()) ?>"
                 }
             ]
         },
