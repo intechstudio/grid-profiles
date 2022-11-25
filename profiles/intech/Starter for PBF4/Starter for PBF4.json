@@ -1,0 +1,238 @@
+{
+    "name": "Starter for PBF4",
+    "description": "Starter profile with global controls over element CC numbers, channel and resolution toogle. Uses the System Event's init event to set the CC assignments for the control elements.",
+    "type": "PBF4",
+    "isGridProfile": true,
+    "version": {
+        "major": "1",
+        "minor": "2",
+        "patch": "28"
+    },
+    "configs": [
+        {
+            "controlElementNumber": 0,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:pva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "1",
+                    "config": "<?lua --[[@cb]] if highResolution==true then self:pmo(10)self:pma(16383)else self:pmo(7)self:pma(127)end--[[@l]] local num,val,ch,cc=self:ind(),self:pva(),default_channel,self.cc--[[@if]] if highResolution == true then--[[@gmsh]] gms(ch,176,cc,val//128) gms(ch,176,cc+32,val%128)--[[@glp]] glp(num,1,val//128)--[[@el]] else--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,1,val)--[[@en]] end ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 1,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:pva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "1",
+                    "config": "<?lua --[[@cb]] if highResolution==true then self:pmo(10)self:pma(16383)else self:pmo(7)self:pma(127)end--[[@l]] local num,val,ch,cc=self:ind(),self:pva(),default_channel,self.cc--[[@if]] if highResolution == true then--[[@gmsh]] gms(ch,176,cc,val//128) gms(ch,176,cc+32,val%128)--[[@glp]] glp(num,1,val//128)--[[@el]] else--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,1,val)--[[@en]] end ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 2,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:pva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "1",
+                    "config": "<?lua --[[@cb]] if highResolution==true then self:pmo(10)self:pma(16383)else self:pmo(7)self:pma(127)end--[[@l]] local num,val,ch,cc=self:ind(),self:pva(),default_channel,self.cc--[[@if]] if highResolution == true then--[[@gmsh]] gms(ch,176,cc,val//128) gms(ch,176,cc+32,val%128)--[[@glp]] glp(num,1,val//128)--[[@el]] else--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,1,val)--[[@en]] end ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 3,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:pva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "1",
+                    "config": "<?lua --[[@cb]] if highResolution==true then self:pmo(10)self:pma(16383)else self:pmo(7)self:pma(127)end--[[@l]] local num,val,ch,cc=self:ind(),self:pva(),default_channel,self.cc--[[@if]] if highResolution == true then--[[@gmsh]] gms(ch,176,cc,val//128) gms(ch,176,cc+32,val%128)--[[@glp]] glp(num,1,val//128)--[[@el]] else--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,1,val)--[[@en]] end ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 4,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:pva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "1",
+                    "config": "<?lua --[[@cb]] if highResolution==true then self:pmo(10)self:pma(16383)else self:pmo(7)self:pma(127)end--[[@l]] local num,val,ch,cc=self:ind(),self:pva(),default_channel,self.cc--[[@if]] if highResolution == true then--[[@gmsh]] gms(ch,176,cc,val//128) gms(ch,176,cc+32,val%128)--[[@glp]] glp(num,1,val//128)--[[@el]] else--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,1,val)--[[@en]] end ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 5,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:pva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "1",
+                    "config": "<?lua --[[@cb]] if highResolution==true then self:pmo(10)self:pma(16383)else self:pmo(7)self:pma(127)end--[[@l]] local num,val,ch,cc=self:ind(),self:pva(),default_channel,self.cc--[[@if]] if highResolution == true then--[[@gmsh]] gms(ch,176,cc,val//128) gms(ch,176,cc+32,val%128)--[[@glp]] glp(num,1,val//128)--[[@el]] else--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,1,val)--[[@en]] end ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 6,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:pva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "1",
+                    "config": "<?lua --[[@cb]] if highResolution==true then self:pmo(10)self:pma(16383)else self:pmo(7)self:pma(127)end--[[@l]] local num,val,ch,cc=self:ind(),self:pva(),default_channel,self.cc--[[@if]] if highResolution == true then--[[@gmsh]] gms(ch,176,cc,val//128) gms(ch,176,cc+32,val%128)--[[@glp]] glp(num,1,val//128)--[[@el]] else--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,1,val)--[[@en]] end ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 7,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:pva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "1",
+                    "config": "<?lua --[[@cb]] if highResolution==true then self:pmo(10)self:pma(16383)else self:pmo(7)self:pma(127)end--[[@l]] local num,val,ch,cc=self:ind(),self:pva(),default_channel,self.cc--[[@if]] if highResolution == true then--[[@gmsh]] gms(ch,176,cc,val//128) gms(ch,176,cc+32,val%128)--[[@glp]] glp(num,1,val//128)--[[@el]] else--[[@gms]] gms(ch,176,cc,val)--[[@glp]] glp(num,1,val)--[[@en]] end ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 8,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:bva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),default_channel,self.cc--[[@gms]] gms(ch,144,note,val)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 9,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:bva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),default_channel,self.cc--[[@gms]] gms(ch,144,note,val)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 10,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:bva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),default_channel,self.cc--[[@gms]] gms(ch,144,note,val)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 11,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:bva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "3",
+                    "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),default_channel,self.cc--[[@gms]] gms(ch,144,note,val)--[[@glp]] glp(num,1,val) ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] print('tick') ?>"
+                }
+            ]
+        },
+        {
+            "controlElementNumber": 255,
+            "events": [
+                {
+                    "event": "0",
+                    "config": "<?lua --[[@c]] --[[element[0]-[3] are the top row potmeters]]--[[@c]] --[[element[4]-[7] are faders]]--[[@c]] --[[element[8]-[11] are buttons]]--[[@cb]] default_channel=0;highResolution=false;ele[0].cc=16;ele[1].cc=17;ele[2].cc=18;ele[3].cc=19;ele[4].cc=20;ele[5].cc=21;ele[6].cc=22;ele[7].cc=23;ele[8].cc=24;ele[9].cc=25;ele[10].cc=26;ele[11].cc=27 ?>"
+                },
+                {
+                    "event": "4",
+                    "config": "<?lua --[[@cb]] gpl(gpn()) ?>"
+                },
+                {
+                    "event": "5",
+                    "config": "<?lua --[[@l]] local ch,cmd,param1,param2=midi.ch,midi.cmd,midi.p1,midi.p2 ?>"
+                },
+                {
+                    "event": "6",
+                    "config": "<?lua --[[@cb]] pot_1=ele[0].cc;pot_2=ele[1].cc;pot_3=ele[2].cc;pot_4=ele[3].cc;fader_1=ele[4].cc;fader_2=ele[5].cc;fader_3=ele[6].cc;fader_4=ele[7].cc;button_1=ele[12].cc;button_2=ele[13].cc;button_3=ele[14].cc;button_4=ele[15].cc ?>"
+                }
+            ]
+        }
+    ]
+}
