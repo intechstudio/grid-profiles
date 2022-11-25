@@ -5,6 +5,8 @@ You can find here the first profiles and presets made by intechstudio to explore
 
 ## Get Started
 
+![load a preset to the module](/assets/load_preset.gif)
+
 Each profile or preset has it's own folder here on GitHub with a description written in the file's description field, about what it can do and how you can use it.
 > Some profiles are generic, some are made to be used with DAW or other software.
 
@@ -16,6 +18,9 @@ The profiles and presets can be made and edited with the Grid Editor software.
 
 When you finish loading or editing the profile store your configuration onto the module.
 > Once a configuration is stored, you no longer need Grid Editor running.
+
+To upload a profile or preset onto the module, you need to set up a local folder.
+![how to upload a profile](/assets/add_preset_to_folder.gif)
 
 ## Connect
 Do you have any question or a cool profile to share? Drop it in [Discord](https://discord.gg/GRUdF2R), help others start creating!
