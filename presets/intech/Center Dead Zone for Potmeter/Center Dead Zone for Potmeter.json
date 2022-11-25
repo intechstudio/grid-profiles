@@ -1,0 +1,27 @@
+{
+    "name": "Center Dead Zone for Potmeter",
+    "description": "This preset is useful for DJ style controls, where the center value should be \"off\" for certain effects. Here you can find under locals a \"deadzone\" variable, which is a deadzone are for the control. When \"deadzone\" is active, the led will be red with max intensity.",
+    "type": "potentiometer",
+    "isGridPreset": true,
+    "version": {
+        "major": "1",
+        "minor": "2",
+        "patch": "28"
+    },
+    "configs": {
+        "events": [
+            {
+                "event": "0",
+                "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:pva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+            },
+            {
+                "event": "1",
+                "config": "<?lua --[[@l]] local num,val,ch,cc,dz=self:ind(),self:pva(),gpc(),32+self:ind(),12--[[@cb]] self:pma(127+dz)local r,g,b,p2,dzmin,dzmax=glr(),glg(),glb(),val,(127/2),(127/2+dz)if val>=dzmin and val<=dzmax then p2=63;glc(num,1,255,0,0)glp(num,1,255)elseif val>=dzmax then glc(num,1,r,g,b)p2=val-dz else glc(num,1,r,g,b)p2=val end;gms(ch,176,cc,p2)glp(num,1,p2) ?>"
+            },
+            {
+                "event": "6",
+                "config": "<?lua --[[@cb]] print('tick') ?>"
+            }
+        ]
+    }
+}

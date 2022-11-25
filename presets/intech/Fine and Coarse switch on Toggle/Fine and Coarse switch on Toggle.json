@@ -1,0 +1,31 @@
+{
+    "name": "Fine and Coarse switch on Toggle",
+    "description": "On the encoder's button press you can toggle between coarse and fine tuning. By default, 4 values are changed in the \"course\" mode. The button press sets the LED color (green and orange) to indicate value increments.",
+    "type": "encoder",
+    "isGridPreset": true,
+    "version": {
+        "major": "1",
+        "minor": "2",
+        "patch": "28"
+    },
+    "configs": {
+        "events": [
+            {
+                "event": "0",
+                "config": "<?lua --[[@sec]] self:emo(0) self:ev0(0)--[[@sbc]] self:bmo(1)--[[@l]] local num,bval,eval,red,gre,blu=self:ind(),self:bva(),self:eva(),glr(),glg(),glb()--[[@glc]] glc(num,2,35,220,0,0)--[[@glp]] glp(num,1,bval)--[[@glp]] glp(num,2,eval) ?>"
+            },
+            {
+                "event": "3",
+                "config": "<?lua --[[@l]] local num,val,ch,note=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() == 127 then--[[@cb]] self:ema(32)self:eva(self.value//4)glc(num,2,120,135,0)--[[@el]] else--[[@cb]] self:ema(127)self:eva(self.value)glc(num,2,35,220,0)--[[@en]] end ?>"
+            },
+            {
+                "event": "2",
+                "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(), 1,(32+gmx()*16+self:ind())%128--[[@if]] if self:bva() == 127 then--[[@cb]] self.value=math.min(127,val*4)--[[@gms]] gms(ch,176,cc,self.value)--[[@el]] else--[[@cb]] self.value=val--[[@gms]] gms(ch,176,cc,self.value)--[[@en]] end--[[@glp]] glp(num,2,self.value) ?>"
+            },
+            {
+                "event": "6",
+                "config": "<?lua --[[@cb]] print('tick') ?>"
+            }
+        ]
+    }
+}

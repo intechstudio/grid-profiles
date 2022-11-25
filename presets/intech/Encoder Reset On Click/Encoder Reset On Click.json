@@ -1,0 +1,31 @@
+{
+    "name": "Encoder Reset On Click",
+    "description": "This is an absolute encoder setup, with visual feedback (green) on centered reset. Ideal for panning or other.",
+    "type": "encoder",
+    "isGridPreset": true,
+    "version": {
+        "major": "1",
+        "minor": "2",
+        "patch": "28"
+    },
+    "configs": {
+        "events": [
+            {
+                "event": "0",
+                "config": "<?lua --[[@cb]] self:eva(63)--[[@l]] local num,bval,eval,red,gre,blu=self:ind(),self:bva(),self:eva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu,0)--[[@glc]] glc(num,2,0,255,84,0)--[[@glp]] glp(num,1,bval)--[[@glp]] glp(num,2,eval) ?>"
+            },
+            {
+                "event": "3",
+                "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:bva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@if]] if self:bst() > 0 then--[[@cb]] self:eva(63)--[[@gms]] gms(ch,176,cc,63)--[[@glc]] glc(num,2,0,255,84,0)--[[@glp]] glp(num,2,63)--[[@en]] end ?>"
+            },
+            {
+                "event": "2",
+                "config": "<?lua --[[@l]] local num,val,ch,cc=self:ind(),self:eva(),(gmy()*4+gpc())%16,(32+gmx()*16+self:ind())%128--[[@gms]] gms(ch,176,cc,val)--[[@if]] if val ~= 63 then--[[@glc]] glc(num,2,0,93,255,0)--[[@en]] end--[[@glp]] glp(num,2,val) ?>"
+            },
+            {
+                "event": "6",
+                "config": "<?lua --[[@cb]] print('tick') ?>"
+            }
+        ]
+    }
+}

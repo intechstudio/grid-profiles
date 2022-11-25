@@ -1,0 +1,31 @@
+{
+    "name": "Two Layer Encoder Control (On Press)",
+    "description": "On button press, encoder will send values on different CCs. The two layered solution is done with two variables, self.pr and self.rot, one for simple rotation, other for push + rotation. LED colors will also change, depending on the button state (state of push).",
+    "type": "encoder",
+    "isGridPreset": true,
+    "version": {
+        "major": "1",
+        "minor": "2",
+        "patch": "28"
+    },
+    "configs": {
+        "events": [
+            {
+                "event": "0",
+                "config": "<?lua --[[@sec]] self:emo(1) self:ev0(100)--[[@cb]] self.pr=0;self.rot=0--[[@l]] local num,bval,eval,red,gre,blu=self:ind(),self:bva(),self:eva(),glr(),glg(),glb()--[[@glc]] glc(num,2,red,gre,blu)--[[@glp]] glp(num,1,bval)--[[@glp]] glp(num,2,eval)--[[@cb]] self.init = nil ?>"
+            },
+            {
+                "event": "3",
+                "config": "<?lua --[[@l]] local num,red,gre,blu=self:ind(),glr(),glg(),glb()--[[@bpr]] if self:bst()>0 then--[[@cb]] glp(num,2,self.pr)--[[@glc]] glc(num,2,255,0,0,0)--[[@bprel]] else--[[@cb]] glp(num,2,self.rot)--[[@glc]] glc(num,2,red,gre,blu,0)--[[@bpre]] end ?>"
+            },
+            {
+                "event": "2",
+                "config": "<?lua --[[@l]] local num,val,ch,cc,lval=self:ind(),self:eva(),1,self:ind(),0--[[@cb]] if self:bst()==127 then self.pr=math.min(127,self.pr+val-64)self.pr=math.max(0,self.pr)lval=self.pr;gms(ch,176,cc+48,self.pr)else self.rot=math.min(127,self.rot+val-64)self.rot=math.max(0,self.rot)lval=self.rot;gms(ch,176,cc,self.rot)end--[[@glp]] glp(num,2,lval) ?>"
+            },
+            {
+                "event": "6",
+                "config": "<?lua --[[@cb]] print('tick') ?>"
+            }
+        ]
+    }
+}
